@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="question1" class="question_8.Question">
+        <property name="id" value="1"/>
+        <property name="question" value="What is NLP?"/>
+        <property name="answers">
+            <list>
+                <value>Natural Language Processing</value>
+                <value>Neural Language Processing</value>
+                <value>Both</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="question2" class="question_8.Question">
+        <property name="id" value="2"/>
+        <property name="question" value="What is AI?"/>
+        <property name="answers">
+            <list>
+                <value>Artificial Intelligence</value>
+                <value>Machine Learning</value>
+                <value>Data Science</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="student" class="question_8.Student">
+        <property name="id" value="22000253"/>
+        <property name="name" value="Arshil"/>
+        <property name="questions">
+            <list>
+                <ref bean="question1"/>
+                <ref bean="question2"/>
+            </list>
+        </property>
+    </bean>
+</beans>

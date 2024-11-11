@@ -1,0 +1,41 @@
+w<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="question1" class="question_4.Question">
+        <constructor-arg value="1"/>
+        <constructor-arg value="What is Java?"/>
+        <constructor-arg>
+            <list>
+                <value>Programming Language</value>
+                <value>Platform</value>
+                <value>Both</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="question2" class="question_4.Question">
+        <constructor-arg value="2"/>
+        <constructor-arg value="What is Spring?"/>
+        <constructor-arg>
+            <list>
+                <value>Framework</value>
+                <value>Library</value>
+                <value>Both</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="student" class="question_4.Student">
+        <constructor-arg value="22000253"/>
+        <constructor-arg value="Arshil"/>
+        <constructor-arg>
+            <list>
+                <ref bean="question1"/>
+                <ref bean="question2"/>
+            </list>
+        </constructor-arg>
+    </bean>
+</beans>

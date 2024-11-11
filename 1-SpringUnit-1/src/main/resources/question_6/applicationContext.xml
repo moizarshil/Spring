@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="question_6.Address">
+        <constructor-arg value="Vadodara"/>
+        <constructor-arg value="GUJ"/>
+        <constructor-arg value="INDIA"/>
+    </bean>
+
+    <bean id="manager" class="question_6.Manager">
+        <constructor-arg value="253"/>
+        <constructor-arg value="Arshil"/>
+        <constructor-arg ref="address"/>
+    </bean>
+</beans>

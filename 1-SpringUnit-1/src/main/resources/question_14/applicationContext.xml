@@ -1,0 +1,24 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="book1" class="question_14.Book">
+        <property name="title" value="Cloud Computing"/>
+        <property name="author" value="JJ parcel"/>
+    </bean>
+
+    <bean id="book2" class="question_14.Book">
+        <property name="title" value="Rich Dad Poor Dad"/>
+        <property name="author" value="Morgan"/>
+    </bean>
+
+    <bean id="library" class="question_14.Library">
+        <property name="books">
+            <list>
+                <ref bean="book1"/>
+                <ref bean="book2"/>
+            </list>
+        </property>
+    </bean>
+</beans>

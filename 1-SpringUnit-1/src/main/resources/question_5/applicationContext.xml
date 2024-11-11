@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="question1" class="question_5.Question">
+        <constructor-arg value="1"/>
+        <constructor-arg value="What is your name?"/>
+        <constructor-arg value="Arshil"/>
+    </bean>
+
+    <bean id="question2" class="question_5.Question">
+        <constructor-arg value="2"/>
+        <constructor-arg value="What is your age?"/>
+        <constructor-arg value="20 years"/>
+    </bean>
+
+    <bean id="questionMap" class="question_5.QuestionMap">
+        <constructor-arg>
+            <map>
+                <entry key="1" value-ref="question1"/>
+                <entry key="2" value-ref="question2"/>
+            </map>
+        </constructor-arg>
+    </bean>
+</beans>
